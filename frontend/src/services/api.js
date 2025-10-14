@@ -22,18 +22,6 @@ api.interceptors.request.use(
 );
 
 
-// This file sets up axios with default configuration
-
-import axios from 'axios';
-
-// Create axios instance with base URL
-const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000',
-  headers: {
-    'Content-Type': 'application/json'
-  }
-});
-
 // Request interceptor - Add JWT token to every request
 api.interceptors.request.use(
   (config) => {
